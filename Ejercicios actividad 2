@@ -1,0 +1,100 @@
+package com.mycompany.proyecto1;
+import java.util.Scanner;
+public class Proyecto1 {
+    public static void main(String[] args) {
+    Scanner entrada = new Scanner (System.in);
+    int codigo; String nombre;double horas_trabajadas_mes, salario_bruto, salario_neto;
+    double valor_hora; double retencion; double porcentaje_retencion;
+    System.out.print("Ingrese el  codigo: ");
+    codigo = entrada.nextInt();
+    System.out.print("Ingrese el nombre: ");
+    nombre = entrada.next();
+    System.out.print("Ingrese el numero de horas trabajadas: ");
+    horas_trabajadas_mes = entrada.nextDouble();
+    System.out.print("Ingrese el porcentaje de retencion: ");
+    porcentaje_retencion = entrada.nextDouble();
+    System.out.print("Ingrese el valor de la hora: ");
+    valor_hora = entrada.nextDouble();
+    salario_bruto = (horas_trabajadas_mes*valor_hora);
+    retencion = (salario_bruto*porcentaje_retencion);
+    salario_neto = (salario_bruto-retencion);
+    System.out.print("El nombre es: "+ nombre);
+    System.out.print("El codigo es: "+ codigo);
+    System.out.print("El salario bruto es: "+ salario_bruto);
+    System.out.print("El salario neto es: "+ salario_neto);
+    }
+}
+
+
+
+package com.mycompany.ejercicio19;
+import java.util.Scanner;
+public class Ejercicio19 {
+
+    public static void main(String[] args) {
+    Scanner entrada = new Scanner (System.in);
+    double lado,perimetro,area,altura;
+    System.out.print("Ingrese la longitud de un lado del triangulo: ");
+    lado = entrada.nextDouble();
+    perimetro = (lado*3);
+    altura =(Math.pow(lado,2)-(Math.pow((lado/2),2)));
+    altura = Math.pow(altura, 0.5);
+    area = ((lado*altura)/2);
+    System.out.print("area= "+area+"perimetro="+perimetro+"altura="+altura);
+    
+    }
+}
+
+package com.mycompany.ejercicio21;
+import java.util.Scanner;
+public class Ejercicio21 {
+
+    public static void main(String[] args) {
+    Scanner entrada = new Scanner (System.in);
+    double lado1,lado2,lado3,perimetro,area,altura,semiperimetro;
+    System.out.print("Ingrese la longitud de un lado del triangulo: ");
+    lado = entrada.nextDouble();
+    }
+}
+package com.mycompany.ejercicio7;
+import java.util.Scanner;
+public class Ejercicio7 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Ingresa el valor de A:");
+        int A = entrada.nextInt();    
+        System.out.println("Ingresa el valor de B:");
+        int B = entrada.nextInt();
+        if (A > B) {
+           System.out.println("A es mayor que B");
+        } else if (A < B) {
+           System.out.println("A es menor que B");
+        } else {
+            System.out.println("A es igual a B");
+    }
+}}
+package com.mycompany.ejercicio10;
+import java.util.Scanner;
+public class Ejercicio10 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Ingrese el número de inscripción:");
+        int numeroInscripcion = entrada.nextInt();
+        System.out.println("Ingrese los nombres del estudiante:");
+        String nombres = entrada.nextLine();
+        entrada.nextLine();
+        System.out.println("Ingrese el patrimonio del estudiante:");
+        double patrimonio = entrada.nextDouble();
+        System.out.println("Ingrese el estrato social del estudiante:");
+        int estrato = entrada.nextInt();
+        double pagoMatricula = 50000;
+        if (patrimonio > 2000000 && estrato > 3) {
+            pagoMatricula += patrimonio * 0.03;
+ }
+         System.out.println("Número de inscripción: " + numeroInscripcion);
+         System.out.println("Nombres: " + nombres);
+         System.out.println("Pago de matrícula: $" + pagoMatricula);
+    }
+}
